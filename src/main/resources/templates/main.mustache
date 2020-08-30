@@ -1,0 +1,29 @@
+<html>
+
+<body>
+<div>
+    <form action="/logout" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+</div>
+<div>
+    <form method="post" action="/api/main">
+        <input type="text" name="description" placeholder="Введите описание проблемы"/>
+        <input type="text" name="address" placeholder="Введите адрес">
+        <input type="text" name="phoneNumber" placeholder="Введите номер телефона">
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+<div>Список заявок</div>
+{{#repairRequests}}
+    <div>
+        <b>{{id}}</b>
+        <span>{{description}}</span>
+        <span>{{address}}</span>
+        <span>{{phoneNumber}}</span>
+        <a href="/edit/{{id}}">edit</a>
+        <a href="/api/main-delete/{{id}}">delete</a>
+    </div>
+{{/repairRequests}}
+</body>
+</html>

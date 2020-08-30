@@ -1,0 +1,31 @@
+<html>
+
+<body>
+<div>
+    <form action="/logout" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+</div>
+<div>
+    <form method="post" action="/api/main-update">
+        <input type="hidden" name="id" value="{{repairRequest.id}}">
+        <label for="description">
+            Description:
+            <input type="text" name="description" value="{{repairRequest.description}}" />
+        </label>
+        <br>
+        <label for="address">
+            Address:
+            <input type="text" name="address" value="{{repairRequest.address}}">
+        </label>
+        <br>
+        <label for="phoneNumber">
+            Phone number:
+            <input type="text" name="phoneNumber" value="{{repairRequest.phoneNumber}}">
+        </label>
+        <br>
+        <button type="submit">Edit</button>
+    </form>
+</div>
+</body>
+</html>
