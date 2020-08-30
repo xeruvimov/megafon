@@ -13,3 +13,7 @@ mvn spring-boot:run
 * username: postgres
 * password: postgres
 * port: 5432
+
+Данные для входа администратора
+* login: admin
+* password: admin
